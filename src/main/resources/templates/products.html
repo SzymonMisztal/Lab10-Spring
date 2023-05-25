@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Products</title>
+</head>
+<body>
+    <h1>Products:</h1>
+    <table class="display table table-bordered" style="width:800px">
+        <thead class="text-center">
+        <tr>
+            <th class="text-center">Id</th>
+            <th class="text-center">Name</th>
+            <th class="text-center">Price</th>
+            <th class="text-center" colspan="3">Action</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="product : ${products}">
+            <td class="text-left" th:text="${product.getId()}"></td>
+            <td class="text-left" th:text="${product.getName()}"></td>
+            <td class="text-left" th:text="${product.getPrice()}"></td>
+            <td><a class="btn btn-primary" th:href="@{/products/details(id=${product.getId()})}">Details</a></td>
+            <td><a class="btn btn-primary" th:href="@{/products/edit(id=${product.getId()})}">Edit</a></td>
+            <td><a class="btn btn-danger" th:href="@{/products/remove(id=${product.getId()})}">Remove</a></td>
+        </tr>
+        </tbody>
+    </table>
+    <a class="btn btn-primary" href="/products/add">Add product</a>
+    <br/>
+    <a class="btn btn-primary" href="/">Menu</a>
+</body>
+</html>

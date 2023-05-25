@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Create category</title>
+</head>
+<body>
+<form action="#" th:ation="@{/categories/add}" th:object="${category}" method="post">
+  <p>Name: <input type="text" th:field="${category.name}"></p>
+  <p>Code: <input type="text" th:field="${category.category}"></p>
+  <p><input type="submit" value="Add"> <input type="reset" value="Reset"></p>
+</form>
+</body>
+</html>

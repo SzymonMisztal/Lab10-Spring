@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org en">
+<head>
+    <meta charset="UTF-8">
+    <title>Edit a category</title>
+</head>
+<body>
+<h1>Add a new category</h1>
+<form action="#" th:ation="@{/categories/add}" th:object="${category}" method="post">
+    <p>Id: <input type="text" th:field="*{id}"></p>
+    <p>Name: <input type="text" th:field="*{name}"></p>
+    <p>Code: <input type="text" th:field="*{code}"></p>
+    <p><input type="submit" value="Modify"> <input type="reset" value="Reset"></p>
+</form>
+<a class="btn btn-primary" href="/">Main page</a>
+</body>
+</html>
